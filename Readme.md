@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Form1.cs](./CS/Q248711/Form1.cs) (VB: [Form1.vb](./VB/Q248711/Form1.vb))
+<!-- default file list end -->
 # How to synchronize the selection in the GridControl and the PivotGridControl
 
 
