@@ -28,7 +28,7 @@ Namespace Q248711
             Me.components = New System.ComponentModel.Container
             Me.pivotGrid = New DevExpress.XtraPivotGrid.PivotGridControl
             Me.salesPersonBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-            Me.nwindDataSet = New Q248711.nwindDataSet
+            Me.nwindDataSet = New nwindDataSet
             Me.fieldCategoryName = New DevExpress.XtraPivotGrid.PivotGridField
             Me.fieldExtendedPrice = New DevExpress.XtraPivotGrid.PivotGridField
             Me.fieldSalesPerson = New DevExpress.XtraPivotGrid.PivotGridField
@@ -38,7 +38,7 @@ Namespace Q248711
             Me.colExtendedPrice = New DevExpress.XtraGrid.Columns.GridColumn
             Me.colSalesPerson = New DevExpress.XtraGrid.Columns.GridColumn
             Me.splitContainerControl1 = New DevExpress.XtraEditors.SplitContainerControl
-            Me.salesPersonTableAdapter = New Q248711.nwindDataSetTableAdapters.SalesPersonTableAdapter
+            Me.salesPersonTableAdapter = New nwindDataSetTableAdapters.SalesPersonTableAdapter
             CType(Me.pivotGrid, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.salesPersonBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -181,8 +181,8 @@ Namespace Q248711
 		Private splitContainerControl1 As DevExpress.XtraEditors.SplitContainerControl
 		Private nwindDataSet As nwindDataSet
 		Private salesPersonBindingSource As System.Windows.Forms.BindingSource
-		Private salesPersonTableAdapter As Q248711.nwindDataSetTableAdapters.SalesPersonTableAdapter
-		Private fieldCategoryName As DevExpress.XtraPivotGrid.PivotGridField
+        Private salesPersonTableAdapter As nwindDataSetTableAdapters.SalesPersonTableAdapter
+        Private fieldCategoryName As DevExpress.XtraPivotGrid.PivotGridField
 		Private fieldExtendedPrice As DevExpress.XtraPivotGrid.PivotGridField
 		Private fieldSalesPerson As DevExpress.XtraPivotGrid.PivotGridField
 		Private colCategoryName As DevExpress.XtraGrid.Columns.GridColumn
