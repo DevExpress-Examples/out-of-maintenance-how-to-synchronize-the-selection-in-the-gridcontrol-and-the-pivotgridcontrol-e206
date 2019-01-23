@@ -11,6 +11,8 @@ namespace Q248711 {
     public partial class Form1 : XtraForm {
         public Form1() {
             InitializeComponent();
+            gridView1.FocusedRowChanged += OnGridViewFocusedRowChanged;
+            gridView1.FocusedColumnChanged += OnGridViewFocusedColumnChanged;
         }
 
         private void Form1_Load(object sender, EventArgs e) {
