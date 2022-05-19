@@ -24,12 +24,15 @@ namespace Q248711 {
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding1 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding2 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding3 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
             this.pivotGrid = new DevExpress.XtraPivotGrid.PivotGridControl();
             this.salesPersonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nwindDataSet = new Q248711.nwindDataSet();
-            this.fieldCategoryName = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.fieldExtendedPrice = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.fieldSalesPerson = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldCategoryName1 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldExtendedPrice1 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldSalesPerson1 = new DevExpress.XtraPivotGrid.PivotGridField();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colCategoryName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -43,6 +46,10 @@ namespace Q248711 {
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
+            this.splitContainerControl1.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).BeginInit();
+            this.splitContainerControl1.Panel2.SuspendLayout();
             this.splitContainerControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,12 +59,13 @@ namespace Q248711 {
             this.pivotGrid.DataSource = this.salesPersonBindingSource;
             this.pivotGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pivotGrid.Fields.AddRange(new DevExpress.XtraPivotGrid.PivotGridField[] {
-            this.fieldCategoryName,
-            this.fieldExtendedPrice,
-            this.fieldSalesPerson});
+            this.fieldCategoryName1,
+            this.fieldExtendedPrice1,
+            this.fieldSalesPerson1});
             this.pivotGrid.Location = new System.Drawing.Point(0, 0);
             this.pivotGrid.Name = "pivotGrid";
             this.pivotGrid.OptionsCustomization.AllowFilter = false;
+            this.pivotGrid.OptionsData.DataProcessingEngine = DevExpress.XtraPivotGrid.PivotDataProcessingEngine.Optimized;
             this.pivotGrid.Size = new System.Drawing.Size(937, 301);
             this.pivotGrid.TabIndex = 0;
             // 
@@ -71,29 +79,32 @@ namespace Q248711 {
             this.nwindDataSet.DataSetName = "nwindDataSet";
             this.nwindDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // fieldCategoryName
+            // fieldCategoryName1
             // 
-            this.fieldCategoryName.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
-            this.fieldCategoryName.AreaIndex = 0;
-            this.fieldCategoryName.Caption = "Category Name";
-            this.fieldCategoryName.FieldName = "CategoryName";
-            this.fieldCategoryName.Name = "fieldCategoryName";
+            this.fieldCategoryName1.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
+            this.fieldCategoryName1.AreaIndex = 0;
+            this.fieldCategoryName1.Caption = "Category Name";
+            dataSourceColumnBinding1.ColumnName = "CategoryName";
+            this.fieldCategoryName1.DataBinding = dataSourceColumnBinding1;
+            this.fieldCategoryName1.Name = "fieldCategoryName1";
             // 
-            // fieldExtendedPrice
+            // fieldExtendedPrice1
             // 
-            this.fieldExtendedPrice.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
-            this.fieldExtendedPrice.AreaIndex = 0;
-            this.fieldExtendedPrice.Caption = "Extended Price";
-            this.fieldExtendedPrice.FieldName = "Extended Price";
-            this.fieldExtendedPrice.Name = "fieldExtendedPrice";
+            this.fieldExtendedPrice1.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.fieldExtendedPrice1.AreaIndex = 0;
+            this.fieldExtendedPrice1.Caption = "Extended Price";
+            dataSourceColumnBinding2.ColumnName = "Extended Price";
+            this.fieldExtendedPrice1.DataBinding = dataSourceColumnBinding2;
+            this.fieldExtendedPrice1.Name = "fieldExtendedPrice1";
             // 
-            // fieldSalesPerson
+            // fieldSalesPerson1
             // 
-            this.fieldSalesPerson.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
-            this.fieldSalesPerson.AreaIndex = 0;
-            this.fieldSalesPerson.Caption = "Sales Person";
-            this.fieldSalesPerson.FieldName = "Sales Person";
-            this.fieldSalesPerson.Name = "fieldSalesPerson";
+            this.fieldSalesPerson1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.fieldSalesPerson1.AreaIndex = 0;
+            this.fieldSalesPerson1.Caption = "Sales Person";
+            dataSourceColumnBinding3.ColumnName = "Sales Person";
+            this.fieldSalesPerson1.DataBinding = dataSourceColumnBinding3;
+            this.fieldSalesPerson1.Name = "fieldSalesPerson1";
             // 
             // gridControl1
             // 
@@ -102,7 +113,7 @@ namespace Q248711 {
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(937, 289);
+            this.gridControl1.Size = new System.Drawing.Size(937, 283);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -148,8 +159,14 @@ namespace Q248711 {
             this.splitContainerControl1.Horizontal = false;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
             this.splitContainerControl1.Name = "splitContainerControl1";
+            // 
+            // splitContainerControl1.Panel1
+            // 
             this.splitContainerControl1.Panel1.Controls.Add(this.pivotGrid);
             this.splitContainerControl1.Panel1.Text = "Panel1";
+            // 
+            // splitContainerControl1.Panel2
+            // 
             this.splitContainerControl1.Panel2.Controls.Add(this.gridControl1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
             this.splitContainerControl1.Size = new System.Drawing.Size(937, 594);
@@ -175,6 +192,10 @@ namespace Q248711 {
             ((System.ComponentModel.ISupportInitialize)(this.nwindDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).EndInit();
+            this.splitContainerControl1.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).EndInit();
+            this.splitContainerControl1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -190,9 +211,9 @@ namespace Q248711 {
         private nwindDataSet nwindDataSet;
         private System.Windows.Forms.BindingSource salesPersonBindingSource;
         private Q248711.nwindDataSetTableAdapters.SalesPersonTableAdapter salesPersonTableAdapter;
-        private DevExpress.XtraPivotGrid.PivotGridField fieldCategoryName;
-        private DevExpress.XtraPivotGrid.PivotGridField fieldExtendedPrice;
-        private DevExpress.XtraPivotGrid.PivotGridField fieldSalesPerson;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldCategoryName1;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldExtendedPrice1;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldSalesPerson1;
         private DevExpress.XtraGrid.Columns.GridColumn colCategoryName;
         private DevExpress.XtraGrid.Columns.GridColumn colExtendedPrice;
         private DevExpress.XtraGrid.Columns.GridColumn colSalesPerson;
